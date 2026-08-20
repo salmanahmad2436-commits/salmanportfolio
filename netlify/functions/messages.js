@@ -24,7 +24,7 @@ exports.handler = async (event) => {
     await axios.post(
       'https://api.brevo.com/v3/smtp/email',
       {
-        sender: { name: name, email: email },
+        sender: { name: 'Salman Portfolio', email: process.env.YOUR_EMAIL },
         to: [{ email: process.env.YOUR_EMAIL, name: 'Website Owner' }],
         subject: `New Contact Form Message from ${name}`,
         htmlContent: `
